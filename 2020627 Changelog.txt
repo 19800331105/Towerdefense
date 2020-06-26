@@ -1,0 +1,11 @@
+2020 06 27 Changelog
+啊啊啊啊，老师，我上传第四版本的时候。可能因为对github操作不熟悉，不知道为什么把第三版本覆盖了……
+
+Added:
+1.在MW1里面加入了很多push__button,点击草坪会出现弹框，可以选择想使用的豌豆射手的类型。
+
+Removed:
+1.删除了world类里的三个成员函数，原本打算使用鼠标点击放送豌豆射手，但是bug过多，无法正常编译，所以选择了点击草坪选择豌豆射手的方法
+   void processor_mouseMoveEvent(QMouseEvent* e);
+    void processor_mousePressEvent(QMouseEvent* e);
+    void processor_mouseReleseEvent(QMouseEvent* e);
