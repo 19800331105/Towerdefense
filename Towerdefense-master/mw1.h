@@ -37,6 +37,7 @@ private slots:
     void addsunshine();//ั๔นโ
     void on_pushButton_clicked();
 
+<<<<<<< HEAD
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
@@ -129,6 +130,8 @@ private slots:
 
     void on_pushButton_46_clicked();
 
+=======
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 private:
     Ui::MW1 *ui;
     World _game;

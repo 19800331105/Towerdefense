@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.8.1, 2020-06-27T01:16:23. -->
-=======
-<!-- Written by QtCreator 4.8.1, 2020-06-26T13:33:27. -->
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
+<!-- Written by QtCreator 4.8.1, 2020-06-15T01:19:50. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -300,8 +296,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">QTMap</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Lenovo/Downloads/Towerdefense-master/Towerdefense-master/QTMap.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">QTMap2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:E:/qt/aaaaaaabigwork/Towerdefense-master/Towerdefense-master/QTMap/QTMap.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">QTMap.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>

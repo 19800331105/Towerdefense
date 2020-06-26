@@ -24,13 +24,8 @@ public:
 
     int getPosX() const{return this->_pos_x;}
     int getPosY() const{return this->_pos_y;}
-<<<<<<< HEAD
-    int getHeight() const{return this->height;}
-    int getWidth() const{return this->width;}
-=======
     int getHeight() const{return this->_icon.getHeight();}
     int getWidth() const{return this->_icon.getWidth();}
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 
     bool canCover() const{return this->_coverable;}
     bool canEat() const{return this->_eatable;}
@@ -45,12 +40,9 @@ public:
     void setRPGobj(float x, float y);//设定中心坐标
     MyMouse getPosition(){return position;}
 
-<<<<<<< HEAD
-=======
     bool isMouseEventInIt(QMouseEvent* e);//检测鼠标事件是否点中该对象
     bool isMyPointInIt(MyMouse p);//检测点是否在对象中
 
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 protected:
     //所有坐标，单位均为游戏中的格
 

@@ -53,6 +53,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; color:#ffffff;&quot;&gt;This is an easy tower defense game.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-style:italic; color:#ffffff;&quot;&gt;Hope you like it.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+<<<<<<< HEAD
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
@@ -1378,6 +1379,8 @@
      <bool>true</bool>
     </property>
    </widget>
+=======
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

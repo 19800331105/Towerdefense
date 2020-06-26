@@ -1,12 +1,13 @@
 #include "world.h"
 #include "icon.h"
 #include "rpgobj.h"
+#include "player.h"
 #include <QMediaPlayer>
 #include<iostream>
+#include <QPainter>
 #include <QMessageBox>
 #include <QApplication>
-
-
+#include "enemy.h"
 using namespace std;
 
 World::~World(){
@@ -19,7 +20,7 @@ World::World()
     mapname=":/pics/startpage.png";
     this->_player = new Player;
     QMediaPlayer * player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/sounds/music.mp3"));
+    player->setMedia(QUrl("qrc:/sounds/hdl.mp3"));
     player->setVolume(30);
     player->play();
 }
@@ -29,14 +30,6 @@ void World::resetWorld(QString mapFile){
     delete background;
     background=new QPixmap;
     background->load(mapname);
-<<<<<<< HEAD
-    Plant* sample = new Plant("wandou", false);
-    sample->setRPGobj(65, 100);
-    _sample_plant.push_back(sample);
-    sample = new Plant("wandoudou", false);
-    sample->setRPGobj(65, 200);
-    _sample_plant.push_back(sample);
-=======
     Plant* displayedTower = new Plant(":/pics/wandou.png", false);
     displayedTower->setRPGobj(400, 50);
     displayMenuOfTowers.push_back(displayedTower);
@@ -44,52 +37,33 @@ void World::resetWorld(QString mapFile){
     displayedTower = new Plant(":/pics/wandoudou.png", false);
     displayedTower->setRPGobj(600, 50);
     displayMenuOfTowers.push_back(displayedTower);
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 }
 
-void World::enemycreator()
+void World::enemy_generator()
 {
     int b;
     Enemy *tmp;
-    b=qrand()%6;//设置一次生成的敌人个数,不超过5
+    b=qrand()%5;//设置一次生成的敌人个数,不超过5
     for(int i=0;i<b;i++)
     {
-        if(i % 4 == 0)
+        if(i%3==0)
         {
-          tmp=new Enemy("zombine");
+          *tmp=Enemy("zombine1");
         }
-        else if(i  %4 == 1)
+        else if(i%3==1)
         {
-          tmp= new Enemy("zombine1");
+           *tmp=Enemy("zombine2");
         }
-        else if(i % 4 == 2)
+        else if(i%3==2)
         {
-           tmp=new Enemy("zombine2");
+           *tmp=Enemy("zombine3");
         }
-        else if(i % 4 == 3)
-        {
-           tmp=new Enemy("zombine3");
-        }
-        tmp->setRPGobj(910,90+96*i);
+        tmp->setPosX(0);
+        tmp->setPosY(b+10*i);
         this->_enemies.push_back(tmp);
     }
 }
-void World::movement(){
-    int i;
-    for(i = 0; i < _enemies.size(); i++){
-        float x = _enemies[i]->getPosition().x();
-        float y = _enemies[i]->getPosition().y();
-        x = x + _enemies[i]->get_v()*_enemies[i]->get_left()/60;
-        _enemies[i]->setRPGobj(x, y);
-    }
-}
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 /*
 void World::initWorld(string mapFile){
     //TODO 下面的内容应该改为从地图文件装载
@@ -125,42 +99,12 @@ void World::initWorld(string mapFile){
 
 
 void World::show(QPainter * painter){
-    stopwatch += 1.0/60;
-   // int n = this->_objs.size();
-   // for (int i=0;i<n;i++){
-   //     this->_objs[i]->show(painter);
-   // }
+    int n = this->_objs.size();
+    for (int i=0;i<n;i++){
+        this->_objs[i]->show(painter);
+    }
     this->_player->show(painter);
     painter->drawPixmap(0,0,960, 540, *background); //背景
-    if(this->mapname==":/pics/startmian.png")
-    {
-        movement();
-        if(((stopwatch - int(stopwatch/frequency)*frequency) >= 0.0) && ((stopwatch - int(stopwatch/frequency)*frequency) < 1.0/60)){
-           enemycreator();
-        }
-
-<<<<<<< HEAD
-        for(int i = 0; i <_sample_plant.size(); i++)
-        {
-        _sample_plant[i]->show(painter);
-        }
-=======
-
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
-
-        for(int i = 0; i <_enemies.size(); i++)
-        {
-        _enemies[i]->show(painter);
-         }
-<<<<<<< HEAD
-
-        for(int i = 0; i < final_plant.size(); i++){
-            final_plant[i]->show(painter);
-        }
-
-=======
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
-    }
 }
 
 void World::eraseObj(int x, int y){

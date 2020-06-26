@@ -19,11 +19,9 @@ void RPGObj::setRPGobj(float x, float y)
     position.setY(y);
 }
 void RPGObj::show(QPainter* p){
-    //将中心坐标转换为左上角坐标
+    //对象的position是中心坐标,要转换
     p->drawPixmap(this->position.x()-width/2, this->position.y()-height/2, width, height, *icon);
 }
-<<<<<<< HEAD
-=======
 bool RPGObj::isMouseEventInIt(QMouseEvent *e){
     if(abs(e->x()-position.x()) < width/2 && abs(e->y()-position.y()) < height/2){
         return true;
@@ -39,7 +37,6 @@ bool RPGObj::isMyPointInIt(MyMouse p){
 
 
 
->>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 
 void RPGObj::initObj(string type)
 {

@@ -6,10 +6,13 @@
 #include <iostream>
 #include <Windows.h>
 #include <QObject>
+<<<<<<< HEAD
 #include  <QMessageBox>
 #include  "plant.h"
 #include  "world.h"
 
+=======
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 
 using namespace std;
 
@@ -19,6 +22,7 @@ MW1::MW1(QMainWindow *parent) :
     _game()
 {
     ui->setupUi(this);
+<<<<<<< HEAD
     //_game.initWorld("");//TODO åº?è¯¥æ?¯è??¥æ???????°å?¾æ??ä»?    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));//è®¾ç½®???ºç?å­?
     //timer = new QTimer(this);
     //connect(timer,SIGNAL(timeout()),this,SLOT(randomMove()));
@@ -72,6 +76,19 @@ MW1::MW1(QMainWindow *parent) :
     setMouseTracking(true);//??
     centralWidget()->setMouseTracking(true);//??
     setFixedSize(960,540);//??
+=======
+    //_game.initWorld("");//TODO åº”è¯¥æ˜¯è¾“å…¥æœ‰æ•ˆçš„åœ°å›¾æ–‡ä»¶
+    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));//è®¾ç½®éšæœºç§å­
+    //timer = new QTimer(this);
+    //connect(timer,SIGNAL(timeout()),this,SLOT(randomMove()));
+        //randomMove()ä¸ºè‡ªå®šä¹‰æ§½å‡½æ•°
+    //timer->start(50);
+    //timer->setInterval(500);
+
+    setMouseTracking(true);//æ— 
+    centralWidget()->setMouseTracking(true);//æ— 
+    setFixedSize(960,540);//æ— 
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 }
 
 MW1::~MW1()
@@ -96,7 +113,12 @@ void MW1::paintEvent(QPaintEvent *e){
 /*
 //void MW1::keyPressEvent(QKeyEvent *e)
 {
+<<<<<<< HEAD
     //direction = 1,2,3,4 for ä¸?ä¸?å·¦å??    if(e->key() == Qt::Key_A)
+=======
+    //direction = 1,2,3,4 for ä¸Šä¸‹å·¦å³
+    if(e->key() == Qt::Key_A)
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
     {
         this->_game.handlePlayerMove(3,1);
     }
@@ -118,7 +140,11 @@ void MW1::paintEvent(QPaintEvent *e){
 
 void MW1::randomMove(){
 
+<<<<<<< HEAD
     int d = 1 + rand()%4;//???????ºè??¨ç???¹å??
+=======
+    int d = 1 + rand()%4;//ç”Ÿæˆéšæœºè¿åŠ¨çš„æ–¹å‘
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
     this->_game.handlePlayerMove(d,1);
     this->repaint();
 }
@@ -129,6 +155,7 @@ void MW1::on_pushButton_clicked()
     ui->pushButton->hide();
     ui->pushButton_2->hide();
     ui->label->hide();
+<<<<<<< HEAD
     ui->pushButton_3->show();
     ui->pushButton_4->show();
     ui->pushButton_5->show();
@@ -174,6 +201,8 @@ void MW1::on_pushButton_clicked()
     ui->pushButton_45->show();
     ui->pushButton_46->show();
     ui->pushButton_47->show();
+=======
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
 
     _game._player->setLife(100);
     _game._player->setsunshine(200);
@@ -188,6 +217,7 @@ void MW1::on_pushButton_clicked()
 
 
 }
+<<<<<<< HEAD
 
 void MW1::on_pushButton_3_clicked()
 {
@@ -1134,3 +1164,5 @@ void MW1::on_pushButton_46_clicked()
             ui->pushButton_46->hide();
         }
 }
+=======
+>>>>>>> cb9d0ba157c0f5837e19c36582f7957bb8432883
