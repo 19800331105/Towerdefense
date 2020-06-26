@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/pics">
+        <file>TileB.png</file>
+        <file>wandou.png</file>
+        <file>wandoudou.png</file>
+        <file>startpage.png</file>
+        <file>startmian.png</file>
+        <file>zombine1.png</file>
+        <file>zombine2.png</file>
+        <file>zombine3.png</file>
+        <file>zombine.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>2953.mp3</file>
+        <file>crash.mp3</file>
+        <file>music.mp3</file>
+        <file>failure.mp3</file>
+        <file>victory.mp3</file>
+    </qresource>
+</RCC>
