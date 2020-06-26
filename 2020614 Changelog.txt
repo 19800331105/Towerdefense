@@ -1,0 +1,22 @@
+2020/6/14 Changelog
+
+Added:
+1.Plant类，相当于攻击手，只是简单的类，目前只能匹配到相应的两个不同种类的豌豆射手，但是不知道如何实现拖拽安放植物。
+2. QTimer *_addsunshine，void addsunshine()，相当于按照时间会增加阳光数量，用于购买豌豆射手；
+3.getLife，setLife，getsunshine，setsunshine四个函数可以帮助实现僵尸生命的计算和剩余阳光。
+
+Changed:
+1.关于string,std::string和QString。开始因为直接使用string类型的形参，报错，查找资料后改为了Qt自己的字符串QString。后来发现，也可以通过添加名称空间标示符std:消除报错；
+2.将initworld（）改为了resetWorld（），增加了一些函数实现能够让startmian.png出现。（initworld总是记不住，容易不清楚含义）
+
+Deprecated ：
+1.Fruit类可能会删除或者参考用于后期升级版本僵尸吃掉植物，erase（）；
+2.MW1的第二个button没想好；
+3.icon类是学习的一种在QT中假如图片的方法，考虑能否和QTMap原来的icon融合
+
+Removed:
+1.Road.h和Road.app 路的设计可以通过背景图实现，一块一块通过坐标实现road过于繁复；
+2.原来的startmain.h和startmain.app，通过hide button，label和函数resetWorld（）可以实现在一个窗口里设置出游戏场景，于是将其删除。
+
+
+
